@@ -28,3 +28,12 @@ class Client:
         response = s.recv(2048).decode("utf-8")
         s.close()
         return "From server" + response
+
+    def debug_talk(self, msg):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((self.ip, self.port))
+        s.send(msg.encode())
+        print("To server", msg)
+        response = s.recv(2048).decode("utf-8")
+        s.close()
+        return "From server" + response
