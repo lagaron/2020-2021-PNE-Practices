@@ -1,4 +1,5 @@
 from client0 import Client
+import termcolor
 
 PRACTICE = 2
 EXERCISE = 3
