@@ -1,8 +1,4 @@
 import socket
-import termcolor
-import socket
-import server_utils
-from Seq1 import Seq
 
 class Client:
     def __init__(self, ip, port):
