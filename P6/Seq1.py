@@ -162,8 +162,8 @@ class Seq:
                     changed_seq += "C"
             return changed_seq
 
-    def read_fasta(self, filename):
-        self.strbases = Seq.take_out_first_line(Path(filename).read_text())
+    def read_fasta(self, filename, path):
+        self.strbases = Seq.take_out_first_line(path(filename).read_text())
 
     @staticmethod
     def take_out_first_line(sequence):
@@ -184,5 +184,6 @@ class Seq:
         s1= Seq()
         s2= Seq("ACTGA")
         s3= Seq("Invalid sequence")
-        return s1, s2,s3
+        s4= Seq()
+        return s1, s2, s3, s4
 

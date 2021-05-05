@@ -1,3 +1,9 @@
+from jinja2 import Template
+import pathlib
+
+def read_template_html_file(filename):
+    content = Template(pathlib.Path(filename).read_text())
+    return content
 
 def print_colored(message, color):
     import termcolor
@@ -19,7 +25,7 @@ def seq_info (cs,Seq, argument):
     p_two = (variable[1] * 100) / lenght
     p_three = (variable[2] * 100) / lenght
     p_four = (variable[3] * 100) / lenght
-    response = "Sequence: " + argument + "\n" + "Total length: " + str(lenght) + "\n" +"A: " + str(variable[0]) +" (" + str(p_one) + "%)" + "\n" + "C: " + str(variable[1]) +" (" + str(p_two) + "%)" + "\n" + "G: " + str(variable[2]) +" (" + str(p_three) + "%)" + "\n" + "T: " + str(variable[3]) +" (" + str(p_four) + "%)" + "\n"
+    response = "Sequences: " + argument + "\n" + "Total length: " + str(lenght) + "\n" +"A: " + str(variable[0]) +" (" + str(p_one) + "%)" + "\n" + "C: " + str(variable[1]) +" (" + str(p_two) + "%)" + "\n" + "G: " + str(variable[2]) +" (" + str(p_three) + "%)" + "\n" + "T: " + str(variable[3]) +" (" + str(p_four) + "%)" + "\n"
     print(response)
     cs.send(response.encode())
 
@@ -36,7 +42,7 @@ def seq_rev(cs, Seq, argument):
     cs.send(variable.encode())
 
 def seq_gene(cs, Seq, argument):
-    location = "./Sequence/"
+    location = "./Sequences/"
     object = Seq(argument)
     object.read_fasta(location + argument)
     response = str(object)
@@ -54,3 +60,12 @@ def rev_color():
 
 def gene_color():
     print_colored("GENE", "green")
+
+def get(LIST_SEQUENCES, number_sequence):
+    context = {
+        "number": number_sequence,
+        "sequence": LIST_SEQUENCES[int(number_sequence)]
+
+    }
+    contents = read_template_html_file("./html/get.html").render(context=context)
+    return contents
