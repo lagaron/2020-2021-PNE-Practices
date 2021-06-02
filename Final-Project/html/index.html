@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Browsing Human and Vertebrates genome</title>
+  </head>
+  <body style="background-color: lightyellow;">
+   <h1>Browsing Human and Vertebrates genome</h1>
+    <h2>BASIC Level Services</h2>
+    <p>1)List of species in the genome database</p>
+    <form action="/listSpecies" method="get">
+      Limit: <input type="text" name="limit">
+      <br>
+      <input type="submit" value="Send">
+    </form>
+
+    <p>2)Information about the karyotype:</p>
+    <form action="/karyotype" method="get">
+        Select the species: <input type="text" name="species">
+      <br>
+      <input type="submit" value="Send">
+    </form>
+    <p>3)Chromosome Length </p>
+    <form action="/chromosomeLength" method="get">
+        Select the species: <input type="text" name="species">
+       <br>
+           Select a chromosome: <input type="text" name="chromosome">
+       <br>
+      <input type="submit" value="Send">
+    </form>
+    <hr>
+    <h2>MEDIUM Level Services</h2>
+    <p>4)Select a human gene to see its sequence:</p>
+    <form action ="/geneSeq" method="get">
+        Select the gene: <input type="text" name="gene">
+        <br>
+        <input type="submit" value="Send">
+    </form>
+    <p>5)Select a human gene to see its information:</p>
+    <form action ="/geneInfo" method="get">
+        Select the gene: <input type="text" name="gene">
+        <br>
+        <input type="submit" value="Send">
+    </form>
+    <p>6)Select a human gene to see its length and the percentage of all its bases:</p>
+    <form action ="/geneCalc" method="get">
+        Select the gene: <input type="text" name="gene">
+        <br>
+        <input type="submit" value="Send">
+    </form>
+  </body>
+</html>

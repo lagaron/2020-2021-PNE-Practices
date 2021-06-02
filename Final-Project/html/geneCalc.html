@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Information of a human gene:</h1>
+    <p>The gene selected is: {{context.gene}}</p>
+    <p>The number of bases are:</p>
+    {% for n in context.count_bases %}
+    <li>{{n}} = {{context.count_bases[n]}} </li>
+    {% endfor %}
+    <p>The percentage are:</p>
+    {% for n in context.percentage %}
+    <li>{{n}} = ({{context.percentage[n]}}%)</li>
+    {% endfor %}
+    <br>
+    <a href="/">Main page</a>
+  </body>
+</html>

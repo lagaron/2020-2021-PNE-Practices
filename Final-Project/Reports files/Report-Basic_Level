@@ -1,0 +1,716 @@
+REPORT BASIC LEVEL
+===================
+
+---> listSpecies endpoint
+
+* TEST 1:
+
+* INPUT:
+http://localhost:8080/listSpecies?limit=10
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>List of species in the genome database</h1>
+    <p>The total number of species in the ensembl is: 310</p>
+    <p>The limit you have selected is: 10</p>
+    <p>The name of the species are: </p>
+
+    <ul>
+        <li type="circle">little spotted kiwi</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Indian glassy fish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">blue tit</li>
+    </ul>
+
+    <ul>
+        <li type="circle">narwhal</li>
+    </ul>
+
+    <ul>
+        <li type="circle">American beaver</li>
+    </ul>
+
+    <ul>
+        <li type="circle">lumpfish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Chinese hamster</li>
+    </ul>
+
+    <ul>
+        <li type="circle">channel bull blenny</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Golden Hamster</li>
+    </ul>
+
+    <ul>
+        <li type="circle">wild yak</li>
+    </ul>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 2:
+
+*INPUT:
+http://localhost:8080/listSpecies?limit=4
+
+*output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>List of species in the genome database</h1>
+    <p>The total number of species in the ensembl is: 310</p>
+    <p>The limit you have selected is: 4</p>
+    <p>The name of the species are: </p>
+
+    <ul>
+        <li type="circle">little spotted kiwi</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Indian glassy fish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">blue tit</li>
+    </ul>
+
+    <ul>
+        <li type="circle">narwhal</li>
+    </ul>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 3:
+
+* INPUT:
+http://localhost:8080/listSpecies?limit=53
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>List of species in the genome database</h1>
+    <p>The total number of species in the ensembl is: 310</p>
+    <p>The limit you have selected is: 53</p>
+    <p>The name of the species are: </p>
+
+    <ul>
+        <li type="circle">little spotted kiwi</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Indian glassy fish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">blue tit</li>
+    </ul>
+
+    <ul>
+        <li type="circle">narwhal</li>
+    </ul>
+
+    <ul>
+        <li type="circle">American beaver</li>
+    </ul>
+
+    <ul>
+        <li type="circle">lumpfish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Chinese hamster</li>
+    </ul>
+
+    <ul>
+        <li type="circle">channel bull blenny</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Golden Hamster</li>
+    </ul>
+
+    <ul>
+        <li type="circle">wild yak</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Siamese fighting fish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">eastern happy</li>
+    </ul>
+
+    <ul>
+        <li type="circle">cape rock hyrax</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Eurasian eagle-owl</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Japanese quail</li>
+    </ul>
+
+    <ul>
+        <li type="circle">fugu</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Asian bonytongue</li>
+    </ul>
+
+    <ul>
+        <li type="circle">blue-ringed sea krait</li>
+    </ul>
+
+    <ul>
+        <li type="circle">mouse</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Agassiz's desert tortoise</li>
+    </ul>
+
+    <ul>
+        <li type="circle">lyretail cichlid</li>
+    </ul>
+
+    <ul>
+        <li type="circle">coho salmon</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Oriental scops-owl</li>
+    </ul>
+
+    <ul>
+        <li type="circle">zebra mbuna</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Arctic ground squirrel</li>
+    </ul>
+
+    <ul>
+        <li type="circle">clown anemonefish</li>
+    </ul>
+
+    <ul>
+        <li type="circle">koala</li>
+    </ul>
+
+    <ul>
+        <li type="circle">algerian mouse</li>
+    </ul>
+
+    <ul>
+        <li type="circle">sheep</li>
+    </ul>
+
+    <ul>
+        <li type="circle">mouse</li>
+    </ul>
+
+    <ul>
+        <li type="circle">dog</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Spoon-billed sandpiper</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Northern American deer mouse</li>
+    </ul>
+
+    <ul>
+        <li type="circle">burrowing owl</li>
+    </ul>
+
+    <ul>
+        <li type="circle">baker's yeast</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Spotted gar</li>
+    </ul>
+
+    <ul>
+        <li type="circle">steppe mouse</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Canada lynx</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Polar bear</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Amazon molly</li>
+    </ul>
+
+    <ul>
+        <li type="circle">tongue sole</li>
+    </ul>
+
+    <ul>
+        <li type="circle">platypus</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Common snapping turtle</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Western painted turtle</li>
+    </ul>
+
+    <ul>
+        <li type="circle">gray short-tailed opossum</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Golden snub-nosed monkey</li>
+    </ul>
+
+    <ul>
+        <li type="circle">helmeted guineafowl</li>
+    </ul>
+
+    <ul>
+        <li type="circle">golden-line barbel</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Sea squirt Ciona savignyi</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Western Lowland Gorilla</li>
+    </ul>
+
+    <ul>
+        <li type="circle">northern pike</li>
+    </ul>
+
+    <ul>
+        <li type="circle">swamp eel</li>
+    </ul>
+
+    <ul>
+        <li type="circle">Indian peafowl</li>
+    </ul>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 4:
+
+* INPUT:
+http://localhost:8080/listSpecies?limit=530
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ENSEMBL</p>
+    <p>Try again</p>
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+
+---> karyotype endpoint
+
+* TEST 1:
+
+* INPUT:
+http://localhost:8080/karyotype?species=human
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Information about the karyotype</h1>
+    <p>The name of the chromosomes are: </p>
+
+        1<br>
+
+        2<br>
+
+        3<br>
+
+        4<br>
+
+        5<br>
+
+        6<br>
+
+        7<br>
+
+        8<br>
+
+        9<br>
+
+        10<br>
+
+        11<br>
+
+        12<br>
+
+        13<br>
+
+        14<br>
+
+        15<br>
+
+        16<br>
+
+        17<br>
+
+        18<br>
+
+        19<br>
+
+        20<br>
+
+        21<br>
+
+        22<br>
+
+        X<br>
+
+        Y<br>
+
+        MT<br>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 2:
+
+*INPUT:
+http://localhost:8080/karyotype?species=cow
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Information about the karyotype</h1>
+    <p>The name of the chromosomes are: </p>
+
+        1<br>
+
+        2<br>
+
+        3<br>
+
+        4<br>
+
+        5<br>
+
+        6<br>
+
+        7<br>
+
+        8<br>
+
+        9<br>
+
+        10<br>
+
+        11<br>
+
+        12<br>
+
+        13<br>
+
+        14<br>
+
+        15<br>
+
+        16<br>
+
+        17<br>
+
+        18<br>
+
+        19<br>
+
+        20<br>
+
+        21<br>
+
+        22<br>
+
+        23<br>
+
+        24<br>
+
+        25<br>
+
+        26<br>
+
+        27<br>
+
+        28<br>
+
+        29<br>
+
+        X<br>
+
+        MT<br>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 3:
+
+* INPUT:
+http://localhost:8080/karyotype?species=dog
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Information about the karyotype</h1>
+    <p>The name of the chromosomes are: </p>
+
+        1<br>
+
+        2<br>
+
+        3<br>
+
+        4<br>
+
+        5<br>
+
+        6<br>
+
+        7<br>
+
+        8<br>
+
+        9<br>
+
+        10<br>
+
+        11<br>
+
+        12<br>
+
+        13<br>
+
+        14<br>
+
+        15<br>
+
+        16<br>
+
+        17<br>
+
+        18<br>
+
+        19<br>
+
+        20<br>
+
+        21<br>
+
+        22<br>
+
+        23<br>
+
+        24<br>
+
+        25<br>
+
+        26<br>
+
+        27<br>
+
+        28<br>
+
+        29<br>
+
+        30<br>
+
+        31<br>
+
+        32<br>
+
+        33<br>
+
+        34<br>
+
+        35<br>
+
+        36<br>
+
+        37<br>
+
+        38<br>
+
+        X<br>
+
+        MT<br>
+
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 4:
+
+* INPUT:
+http://localhost:8080/karyotype?species=coronavirus
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ENSEMBL</p>
+    <p>Try again</p>
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+
+---> chromosomeLength endpoint
+
+* TEST 1:
+
+* INPUT:
+http://localhost:8080/chromosomeLength?species=mouse&chromosome=18
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Chromosome Length</h1>
+    <p>The length of the chromosome is: 90720763</p>
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 2:
+
+* INPUT:
+http://localhost:8080/chromosomeLength?species=human&chromosome=13
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Chromosome Length</h1>
+    <p>The length of the chromosome is: 114364328</p>
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 3:
+
+* INPUT:
+http://localhost:8080/chromosomeLength?species=dog&chromosome=21
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Chromosome Length</h1>
+    <p>The length of the chromosome is: 50858623</p>
+    <a href="/">Main page</a>
+  </body>
+</html>
+
+* TEST 4:
+
+* INPUT:
+http://localhost:8080/chromosomeLength?species=coronavirus&chromosome=1267
+
+* output:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: red;">
+    <h1>ERROR</h1>
+    <p>Welcome to the DATA ERROR server</p>
+    <p>If you are here is because the data you have entered does not exist in the ENSEMBL</p>
+    <p>Try again</p>
+    <a href="/">Main page</a>
+  </body>
+</html>

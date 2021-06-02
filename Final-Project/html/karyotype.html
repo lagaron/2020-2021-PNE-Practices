@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bases server</title>
+  </head>
+  <body style="background-color: lightblue;">
+    <h1>Information about the karyotype</h1>
+    <p>The name of the chromosomes are: </p>
+    {% for n in context.karyotype %}
+        {{n}}<br>
+    {% endfor %}
+    <a href="/">Main page</a>
+  </body>
+</html>
